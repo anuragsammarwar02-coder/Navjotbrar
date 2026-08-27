@@ -1,5 +1,597 @@
-
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0b0d" />
+
+  <meta
+    name="description"
+    content="Navjot Brar Official — educational content about market concepts, charts and technical analysis. For learning purposes only."
+  />
+
+  <title>Navjot Brar Official (VIP) | Educational Community</title>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
+      n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+      };
+
+      if(!f._fbq)f._fbq=n;
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+    fbq('init', '1022932477233164');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1022932477233164&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+  <!-- End Meta Pixel -->
+
+  <style>
+    :root {
+      --bg: #0a0b0d;
+      --surface: #12141a;
+      --surface2: #1a1d26;
+      --border: #2a2e3a;
+      --text: #f0f1f4;
+      --muted: #8b90a0;
+      --gold: #f0c14b;
+      --gold-dim: rgba(240, 193, 75, 0.12);
+      --blue: #2d8cff;
+      --blue-dark: #1a6fd4;
+      --green: #3ecf8e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 40px 18px 48px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 14px;
+      display: block;
+      border: 2px solid rgba(240, 193, 75, 0.35);
+      box-shadow: 0 0 40px rgba(240, 193, 75, 0.15);
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .brand em {
+      font-style: normal;
+      color: #fff;
+      margin-left: 4px;
+    }
+
+    .tagline {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 14px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(62, 207, 142, 0.35);
+      background: rgba(62, 207, 142, 0.08);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px rgba(62, 207, 142, 0.7);
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    .cta-box {
+      margin: 28px 0 32px;
+      text-align: center;
+    }
+
+    .cta-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 54px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(
+        135deg,
+        var(--blue) 0%,
+        var(--blue-dark) 100%
+      );
+      color: #fff !important;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none !important;
+      cursor: pointer;
+      box-shadow: 0 10px 28px rgba(45, 140, 255, 0.28);
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .cta-primary:active {
+      transform: translateY(0);
+    }
+
+    .cta-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--blue-dark);
+      font-size: 12px;
+      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .cta-hint {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .features {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .feature-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--gold-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .feature h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .feature p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .about {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 16px;
+      margin-bottom: 20px;
+    }
+
+    .about h2 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--gold);
+    }
+
+    .about p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .about p:last-child {
+      margin-bottom: 0;
+    }
+
+    .disclaimer {
+      background: #101218;
+      border: 1px solid #252830;
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 24px;
+    }
+
+    .disclaimer strong {
+      display: block;
+      font-size: 12px;
+      color: #c8ccd6;
+      margin-bottom: 6px;
+    }
+
+    .disclaimer p {
+      font-size: 11px;
+      color: #6e7484;
+      line-height: 1.55;
+    }
+
+    .cta-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--blue);
+      background: transparent;
+      color: var(--blue) !important;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none !important;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .cta-secondary:hover {
+      background: rgba(45, 140, 255, 0.08);
+    }
+
+    footer {
+      margin-top: 36px;
+      text-align: center;
+      font-size: 11px;
+      color: #555a68;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-links {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #6e7484;
+      font-weight: 500;
+      font-size: 11px;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    @media (min-width: 600px) {
+      .wrap {
+        padding-top: 52px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .brand {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="header">
+      <img
+        class="logo"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHFjpSCoT8zWni-l3akG-gztK14Tx68sqASKtaH0VlryYQyuWJnuNPjAY&s=10"
+        alt="Navjot Brar Official logo"
+        width="88"
+        height="88"
+      />
+
+      <div class="brand">
+        Navjot Brar Official <em>VIP</em>
+      </div>
+
+      <p class="tagline">
+        Educational Community & Insights
+      </p>
+
+      <div class="badge">
+        <span class="badge-dot"></span>
+        13,005 Subscribers · Active
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>
+        Market <span>Education & Insights</span>
+      </h1>
+
+      <p>
+        Learn market concepts, chart reading, technical analysis and
+        educational fundamentals through simple learning content.
+      </p>
+    </section>
+
+    <div class="cta-box">
+      <a
+        id="btn-join-telegram"
+        class="cta-primary"
+        href="https://t.me/+Rq15bpZ1EpA0YTRl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="cta-icon">➤</span>
+        Join Free Telegram Channel
+      </a>
+
+      <p class="cta-hint">
+        Free educational content • No personalized investment advice •
+        No guaranteed returns
+      </p>
+    </div>
+
+    <p class="section-title">
+      What you will learn
+    </p>
+
+    <div class="features">
+
+      <article class="feature">
+        <div class="feature-icon">📊</div>
+        <div>
+          <h3>Market Structure & Trends</h3>
+          <p>
+            Educational lessons about market structure, support,
+            resistance and chart reading for learning purposes.
+          </p>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-icon">📈</div>
+        <div>
+          <h3>Technical Analysis Basics</h3>
+          <p>
+            Simple explanations of common chart patterns,
+            indicators and technical concepts for educational study.
+          </p>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-icon">💡</div>
+        <div>
+          <h3>Learning Concepts</h3>
+          <p>
+            General educational information about risk,
+            diversification and long-term thinking.
+          </p>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-icon">🎓</div>
+        <div>
+          <h3>Beginner-Friendly Lessons</h3>
+          <p>
+            Short educational posts designed to help learners
+            understand basic market concepts step by step.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="about">
+      <h2>About this page</h2>
+
+      <p>
+        Navjot Brar Official is an educational Telegram community
+        focused on market learning. We share educational concepts,
+        chart examples, technical-analysis lessons and general
+        market commentary for informational and educational purposes.
+      </p>
+
+      <p>
+        We do not provide personalized financial advice,
+        personalized investment recommendations, portfolio management,
+        or guaranteed returns.
+      </p>
+    </div>
+
+    <div class="disclaimer" id="disclaimer">
+      <strong>Important disclaimer</strong>
+
+      <p>
+        Market investing and trading involve substantial risk of loss
+        and may not be suitable for everyone. Past performance is not
+        a reliable indicator of future results. This website and our
+        Telegram content are provided for general educational and
+        informational purposes only. Always conduct your own research
+        and consider your financial circumstances before making
+        investment decisions.
+      </p>
+    </div>
+
+    <a
+      id="btn-join-telegram-alt"
+      class="cta-secondary"
+      href="https://t.me/+Rq15bpZ1EpA0YTRl"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Open Telegram Channel
+    </a>
+
+    <footer>
+      <p>
+        © 2026 Navjot Brar Official · Educational content only
+      </p>
+
+      <div class="footer-links">
+        <a
+          href="https://t.me/+Rq15bpZ1EpA0YTRl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Telegram
+        </a>
+
+        <a
+          href="#disclaimer"
+          onclick="document.querySelector('#disclaimer').scrollIntoView({behavior:'smooth'}); return false;"
+        >
+          Disclaimer
+        </a>
+      </div>
+
+      <p style="margin-top:10px;font-size:10px;color:#444854;">
+        Ads by Kirtnix Digital Agency
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -420,7 +1012,16 @@ src="https://www.facebook.com/tr?id=1022932477233164&ev=PageView&noscript=1"
         <a href="https://t.me/+Rq15bpZ1EpA0YTRl" target="_blank" rel="noopener noreferrer">Telegram</a>
         <a href="#disclaimer" onclick="document.querySelector('.disclaimer').scrollIntoView({behavior:'smooth'});return false;">Disclaimer</a>
       </div>
-      <p style="margin-top:10px;font-size:10px;color:#444854;">Ads by Kirtnix Digital Agency</p>
+     <p style="margin-top:10px;font-size:10px;">
+  <a
+    href="https://t.me/+G84KwpEa2V0yYTU1"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="color:#444854;text-decoration:none;"
+  >
+    Ads by Kirtnix Digital Agency
+  </a>
+</p>
     </footer>
   </div>
 
